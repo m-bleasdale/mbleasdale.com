@@ -9,7 +9,7 @@ import AnimLink from "@/components/anim-link";
 
 export default function Home() {
   return (
-    <div className="font-sans flex flex-col items-center justify-items-center min-h-screen bg-gradient-to-t from-slate-900 to-blue-900">
+    <div className="font-sans flex flex-col items-center justify-items-center min-h-screen bg-blue-950 sm:bg-gradient-to-t sm:from-slate-900 sm:to-blue-900">
         <div className="grid grid-rows-[48px_1fr] w-full h-[100vh] p-8 pb-20">
           <div className="flex flex-row gap-4 justify-center items-center">
             <SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="#e9ebf0" size={32}/>} />
