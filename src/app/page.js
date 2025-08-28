@@ -12,19 +12,18 @@ export default function Home() {
     <div className="font-sans flex flex-col items-center justify-items-center min-h-screen bg-blue-950 sm:bg-gradient-to-t sm:from-slate-900 sm:to-blue-900">
         <div className="grid grid-rows-[48px_1fr] w-full h-[100vh] p-8 pb-20">
           <div className="flex flex-row gap-4 justify-center items-center">
-            <SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="#e9ebf0" size={32}/>} />
-            <SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="#e9ebf0" size={32}/>} />
-            <SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="#e9ebf0" size={32}/>} />
+            <SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="var(--primary-foreground)" size={32}/>} />
+            <SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="var(--primary-foreground)" size={32}/>} />
+            <SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="var(--primary-foreground)" size={32}/>} />
 
           </div>
           <div className="flex flex-col justify-center items-center w-full">
             <div className="flex flex-col gap-[55px]">
               <div className="flex flex-col gap-[32px]">
-                <h1 className="lg:text-8xl text-7xl text-center text-[#e9ebf0] font-light">Morgan Bleasdale</h1>
-                <div className="flex md:flex-row md:gap-0 gap-3 items-center flex-col justify-between w-full">
-                  <AnimLink>Aspiring Engineer</AnimLink>
-                  <AnimLink>ISSDC World Champion</AnimLink>
-                  <AnimLink>EESW SoTY Runner-Up</AnimLink>
+                <h1 className="lg:text-8xl text-7xl text-center text-primary-foreground font-light">Morgan Bleasdale</h1>
+                <div className="flex flex-col items-center gap-2 text-center">
+                  <p className="text-3xl font-light text-primary-foreground/80 font-light">Electrical and Electronic Engineering</p>
+                  <p className="text-2xl font-light text-primary-foreground/80 font-light">Imperial College London</p>
                 </div>
               </div>
               {/*
