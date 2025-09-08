@@ -7,13 +7,12 @@ import ProjectCard from "@/components/project-card/project-card";
 
 export default function Home() {
   return (
-    <div className="font-sans flex flex-col items-center justify-items-center min-h-screen ">
+    <div className="font-sans flex flex-col items-center justify-items-center min-h-screen">
 		<div className="grid grid-rows-[48px_1fr_48px] w-full h-[100vh] p-8 bg-slate-900">
 			<div className="flex flex-row gap-4 justify-center items-center">
-			<SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="var(--primary-foreground)" size={32}/>} />
-			<SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="var(--primary-foreground)" size={32}/>} />
-			<SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="var(--primary-foreground)" size={32}/>} />
-
+				<SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="var(--primary-foreground)" size={32}/>} />
+				<SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="var(--primary-foreground)" size={32}/>} />
+				<SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="var(--primary-foreground)" size={32}/>} />
 			</div>
 			<div className="flex flex-col justify-center items-center w-full">
 			<div className="grid lg:items-center grid-rows-2 flex-wrap lg:grid-cols-2 lg:grid-rows-1 mt-4 lg:mt-0">
@@ -40,12 +39,13 @@ export default function Home() {
 			</motion.a>
 			</div>
 		</div>
-		<div className="flex flex-col lg:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
+		<div className="flex flex-col md:w-[90%] lg:w-[75%] xl:w-[65%] 2xl:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
 				<p>I'm an incoming Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
 				<p>I've been programming for 6 years and I'm familiar with JavaScript, TypeScript, Python, C++ and C#. The main things I've built recently have been using JS frameworks such as Next.js, React, React Native. I'm exploring new project ideas with new languages and frameworks.</p>
 				<p>The last few years I've been involved with a number of engineering-related competitions. In many of these competitions I've taken on leadership roles, leading small teams of 6 to large teams of 70 in engineering and technical contexts.</p>
+				<p>I won the International Space Settlement Design Competition as the team's VP of Engineering in 2024, and our team was runner-up in 2025. I've also been a UK Space Design Competition national finalist for three consecutive years, serving as company president and a head of department.</p>
 				<p>I've also been named Engineering Student of the Year Runner-Up by the Engineering Education Scheme Wales.</p>
 				<p>It's also an honour to be a recipient of the UKESF Semiconductor Talent Award - a scheme which provides mentorship sessions, workshops, and a learning and development bursary.</p>
 			</div>
@@ -59,18 +59,21 @@ export default function Home() {
 					date="August 2025"
 					type="Application"
 					language="TypeScript"
+					link="https://www.beerbingo.co.uk/"
 				/>
 				<ProjectCard 
 					title="No Time For News - ntfn.co.uk"
-					description="No Time For News serves to produce impartial, no-nonsense news that provides readers with only the most important stories, and explorations of general trends within politics or world news. Working with a team of aspiring journalists, I was responsible for building the main website for the organisation, that was used to display articles to the public."
+					description="No Time For News serves to produce impartial, no-nonsense news that provides readers with only the most important stories, and explorations of trends within politics or world news. Working with a team of journalists, I was responsible for building the main website for the organisation, that was used to display articles to the public."
 					website="https://www.ntfn.co.uk/"
 					github="https://github.com/m-bleasdale/ntfn"
 					date="June - August 2025"
 					type="Application"
 					language="JavaScript"
+					link="https://www.ntfn.co.uk/"
+					image="ntfn.png"
 				/>
 				<ProjectCard 
-					title="Urban Analysis Through the Visualisation of the Geographic Concentration of Businesses"
+					title="Visualisation of the Geographic Concentration of Businesses in Cities"
 					description="This project maps the density of business locations in UK cities, using data from the Food Standards Agency to identify the general locations of urban city-centres, cultural hubs and commercial and entertainment districts. By visualising high density locations, this tool allows users to easily identify urban hotspots for the determination of potential areas for development or for tourists to decide on which areas are worth spending the most time in."
 					website="https://business-heatmap.vercel.app/"
 					github="https://github.com/m-bleasdale/Business-Heatmap"
@@ -78,6 +81,8 @@ export default function Home() {
 					date="June 2025"
 					type="Project"
 					language="JavaScript"
+					link="https://business-heatmap.vercel.app/"
+					image="businessheatmap.png"
 				/>
 
 				<ProjectCard 
@@ -88,6 +93,8 @@ export default function Home() {
 					date="January 2025"
 					type="Application"
 					language="JavaScript"
+					link="https://github.com/m-bleasdale/assistant"
+					image="assistant.png"
 				/>
 
 				<ProjectCard 
@@ -96,14 +103,17 @@ export default function Home() {
 					writeUp="/SustainableCommunityReport.pdf"
 					date="2024"
 					type="Technical Report"
+					link="/SustainableCommunityReport.pdf"
+					image="suscom.png"
 				/>
 
 				<ProjectCard 
-					title="EPQ - To what extent can the energy efficiency of wind turbines be improved?"
+					title="To what extent can the energy efficiency of wind turbines be improved?"
 					description="For my EPQ I covered the topic of wind turbine energy efficiency, exploring the design of modern wind turbines and metrics used to quantify energy efficiency. I then analysed proposed designs of improving energy efficiency."
 					writeUp="/MorganBleasdaleEPQ.pdf"
 					date="2024"
 					type="Research Paper"
+					link="/MorganBleasdaleEPQ.pdf"
 				/>
 
 				<ProjectCard 
@@ -113,6 +123,8 @@ export default function Home() {
 					date="2024"
 					type="Application"
 					language="C#"
+					link="https://github.com/m-bleasdale/UnityGridPlacementSystem"
+					image="gridplacement.png"
 				/>
 
 				<ProjectCard 
@@ -122,11 +134,22 @@ export default function Home() {
 					date="2023"
 					type="Application"
 					language="Python"
+					link="https://github.com/m-bleasdale/UnityGridPlacementSystem"
 				/>
 
-
-
 			</div>
+
+			<div className="flex flex-col items-center gap-2 pb-10">
+				<div className="flex flex-row gap-4 justify-center items-center pb-4">
+					<SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="var(--primary)" size={32}/>} />
+					<SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="var(--primary)" size={32}/>} />
+					<SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="var(--primary)" size={32}/>} />
+				</div>
+				<p className="text-lg font-medium text-primary text-center">© 2025 Morgan Bleasdale</p>
+				<p className="text-sm text-center">This site uses anonymised analytics that doesn't track individual users. <a className="underline" href="https://blog.cloudflare.com/free-privacy-first-analytics-for-a-better-web">Learn more about Cloudflare analytics</a></p>
+			</div>
+
+
 
 		</div>
     </div>

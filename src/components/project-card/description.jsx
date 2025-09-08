@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const maxLength = 200;
+const maxLength = 235;
 
 export default function Description ({ text }) {
     const [isExpanded, setIsExpanded] = useState(false);
