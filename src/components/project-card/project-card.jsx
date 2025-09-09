@@ -5,10 +5,11 @@ import Type from "./type";
 import Language from "./language";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
+import Bullets from "./bullets";
 
-export default function ProjectCard ({image, title, description, website, github, date, type, language, writeUp, link}) {
+export default function ProjectCard ({image, title, description, bullets, website, github, date, type, language, writeUp, link}) {
     const grid = image 
-        ? "md:grid-cols-[240px_1fr] gap-4 md:grid-rows-1 grid-rows-[200_1fr]"
+        ? "md:grid-cols-[230px_1fr] gap-4 md:grid-rows-1 grid-rows-[200_1fr]"
         : "";
 
     return (
@@ -29,13 +30,11 @@ export default function ProjectCard ({image, title, description, website, github
                         {title}
                     </a>
                 </div>
-                <div className="flex flex-row flex-wrap gap-2">
-                    <Type value={type} />
-                    {date && <Badge variant="outline">{date}</Badge>}
-                    {language && <Language value={language} />}
+                <div>
+                    <p className="font-medium">{description}</p>
+                    {bullets && <Bullets bullets={bullets} />}
                 </div>
-                {description && <Description text={description} />}
-                <div className="flex flex-row gap-5">
+                <div className="flex flex-row flex-wrap gap-5">
                     {website && 
                         <a 
                             href={website} 
@@ -69,6 +68,15 @@ export default function ProjectCard ({image, title, description, website, github
                             <p>Report</p>
                         </a>
                     }
+
+                    <div className="flex flex-row flex-wrap gap-2">
+                        <Type value={type} />
+
+                        {date && <Badge variant="outline">{date}</Badge>}
+
+                        {language && <Language value={language} />}
+                    </div>
+
                 </div>
             </div>
         </div>

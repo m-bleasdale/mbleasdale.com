@@ -39,7 +39,7 @@ export default function Home() {
 			</motion.a>
 			</div>
 		</div>
-		<div className="flex flex-col md:w-[90%] lg:w-[75%] xl:w-[65%] 2xl:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
+		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
 				<p>I'm an incoming Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
@@ -53,28 +53,48 @@ export default function Home() {
 				<h1 className="text-3xl font-medium mb-5">Recent Projects</h1>
 				<ProjectCard 
 					title="BeerBingo - beerbingo.co.uk"
-					description="Beer Bingo is a gamified tool to encourage users to track their alcohol consumption, with the objective of reducing alcohol intake. This is inspired by calorie counting apps, which are used to help reduce food intake and lose weight. It contains a database of common drinks found in UK pubs and establishments. Users must press 'Add Drink' everytime they consume a particular beverage. Over time, they can view rankings and statistics about their drinking habits."
+					description="Gamified platform to encourage reduced drinking by making tracking of alcohol consumption fun"
+					bullets={[
+						"Built a full-stack app with a modern Next.js + Supabase stack",
+						"Implemented a custom user authentication system using Supabase Auth",
+						"Built a structured drinks database with Supabase, storing images in an S3 bucket",
+						"Added real-time ranking system and interactive stats dashboard with graphs and trend analysis",
+						"Enabled users to upload new drinks missing from the database",
+						"Iterated features based on feedback and optimised load time by 78% through query optimisation"
+					]}
 					website="https://www.beerbingo.co.uk/"
 					github="https://github.com/m-bleasdale/beer-bingo"
 					date="August 2025"
-					type="Application"
+					type="Full-stack"
 					language="TypeScript"
 					link="https://www.beerbingo.co.uk/"
 				/>
 				<ProjectCard 
 					title="No Time For News - ntfn.co.uk"
-					description="No Time For News serves to produce impartial, no-nonsense news that provides readers with only the most important stories, and explorations of trends within politics or world news. Working with a team of journalists, I was responsible for building the main website for the organisation, that was used to display articles to the public."
+					description="Student-led news platform delivering concise, impartial coverage of world and political events"
+					bullets={[
+						"Built a website and content management system using Next.js and Markdown",
+						"Reached 1.2k+ unique monthly readers",
+						"Worked with a team of journalists to optimise article delivery",
+						"Built front-end components for displaying articles, summaries, and citations",
+					]}
 					website="https://www.ntfn.co.uk/"
 					github="https://github.com/m-bleasdale/ntfn"
 					date="June - August 2025"
-					type="Application"
+					type="Full-stack"
 					language="JavaScript"
 					link="https://www.ntfn.co.uk/"
 					image="ntfn.png"
 				/>
 				<ProjectCard 
 					title="Visualisation of the Geographic Concentration of Businesses in Cities"
-					description="This project maps the density of business locations in UK cities, using data from the Food Standards Agency to identify the general locations of urban city-centres, cultural hubs and commercial and entertainment districts. By visualising high density locations, this tool allows users to easily identify urban hotspots for the determination of potential areas for development or for tourists to decide on which areas are worth spending the most time in."
+					description="GIS tool mapping business location density in UK cities to identify urban hotspots"
+					bullets={[
+						"Built a web-based mapping tool using JavaScript and the Leaflet library",
+						"Mapped location XML data from the UK Food Standards Agency",
+						"Created multiple modes (heatmap and points) for different types of analysis",
+						"Enabled filtering by business type for targeted analysis",
+					]}
 					website="https://business-heatmap.vercel.app/"
 					github="https://github.com/m-bleasdale/Business-Heatmap"
 					writeUp="/Urban_Analysis_Through_the_Visualisation_of_the_Geographic_Concentration_of_Businesses.pdf"
@@ -87,11 +107,17 @@ export default function Home() {
 
 				<ProjectCard 
 					title="AI Assistant"
-					description="This tool is designed to take a simple free text input and update a user's events and tasks. Most people's calendars are full of events, and they have long to-do lists. When something comes up, moving events around in your calendar, or planning time to dedicate to a task, can be a hassle. I designed this tool to reduce the stress that comes with trying to make a busy timetable work. Built with Next.js, Gemini API, Google Calender API, Google Tasks API and OAuth. Google Calendar and Tasks APIs are used to keep track of all events and tasks; as well as edit and modify events and tasks."
+					description="AI agent to manage calendar events and tasks through natural language input"
+					bullets={[
+						"Built a full-stack web app using Next.js, Gemini API, Google Calendar API, Google Tasks API, and OAuth",
+						"Designed the tool to add, modify, and remove events and tasks based on input",
+						"Assistant automatically schedules events around existing commitments",
+						"Enabled assistant to provide scheduling advice and alter existing events",
+					]}
 					website="https://assistant-opal.vercel.app/"
 					github="https://github.com/m-bleasdale/assistant"
 					date="January 2025"
-					type="Application"
+					type="Full-stack"
 					language="JavaScript"
 					link="https://github.com/m-bleasdale/assistant"
 					image="assistant.png"
@@ -99,7 +125,13 @@ export default function Home() {
 
 				<ProjectCard 
 					title="EESW Sustainable Community - Gold Crest Award"
-					description="My team of 6 and I were tasked with designing a conceptual sustainable community in South Wales as apart of the Engineering Education Scheme Wales organised by STEM Cymru. We considered various areas that could be improved upon in the design of new communities and created a technical report and 15 minute presentation to report our findings. We were awarded 'Best Use of STEM for Sustainability'"
+					description="Conceptual sustainable community designed for 500 residents in South Wales"
+					bullets={[
+						"Delivered a 73-page technical report and presentation, working with 6 engineers",
+						"Designed housing, power systems, water management, and EV infrastructure",
+						"Led team as Project Coordinator, managing project progress and overall vision",
+						"Awarded Best Use of STEM for Sustainability & Environment by Welsh Government",
+					]}
 					writeUp="/SustainableCommunityReport.pdf"
 					date="2024"
 					type="Technical Report"
@@ -108,8 +140,15 @@ export default function Home() {
 				/>
 
 				<ProjectCard 
-					title="To what extent can the energy efficiency of wind turbines be improved?"
-					description="For my EPQ I covered the topic of wind turbine energy efficiency, exploring the design of modern wind turbines and metrics used to quantify energy efficiency. I then analysed proposed designs of improving energy efficiency."
+					title="To what extent can the energy efficiency of wind turbines be improved? (EPQ)"
+					description="Investigating modern wind turbine designs and methods to improve energy efficiency and performance"
+					bullets={[
+						"Explored the engineering of modern wind turbines, design variations, and power generation",
+						"Analysed the use of energy efficiency metrics, such as power coefficient, capacity factor, and Betz limit",
+						"Reviewed how rotor radius, wind speed, and system losses impact achievable efficiency",
+						"Evaluated design improvements including aeroelastic blades, dual-rotor systems, and bio-inspired designs",
+						"Assessed trade-offs between efficiency, cost, weight, transport, noise, and carbon footprint",
+					]}
 					writeUp="/MorganBleasdaleEPQ.pdf"
 					date="2024"
 					type="Research Paper"
@@ -118,7 +157,12 @@ export default function Home() {
 
 				<ProjectCard 
 					title="Unity Grid Placement"
-					description="A grid based placement system complete with placement and rotation of variously sized object. Built in Unity. See GitHub for examples."
+					description="Interactive Unity tool for grid-based object placement"
+					bullets={[
+						"Built object selection, placement, rotation, and variable object sizes",
+						"Implemented collision detection to prevent overlapping objects",
+						"Designed an extensible framework to allow new placeable objects to be added",
+					]}
 					github="https://github.com/m-bleasdale/UnityGridPlacementSystem"
 					date="2024"
 					type="Application"
@@ -128,8 +172,13 @@ export default function Home() {
 				/>
 
 				<ProjectCard 
-					title="HandUI - Using AI and Hand Movement as an Alternative to a Mouse"
-					description="This project aimed to create a proof of concept that your hand can be used to interact with a desktop computer in place of a traditional mouse. It's built on Google's ML Mediapipe framework and uses the PyAutoGUI library to control mouse movement."
+					title="HandUI"
+					description="An AI-based hand-tracking interface for desktop mouse control"
+					bullets={[
+						"Developed a hand-tracking system using Google's Mediapipe to translate hand movement into cursor control",
+						"Integrated PyAutoGUI to control mouse position in real-time",
+						"Created a Tkinter desktop application to visualise hand movement",
+					]}
 					github="https://github.com/m-bleasdale/UnityGridPlacementSystem"
 					date="2023"
 					type="Application"
