@@ -42,7 +42,7 @@ export default function Home() {
 		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
-				<p>I'm an incoming Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
+				<p>I'm an Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
 				<p>I've been programming for 6 years and I'm familiar with JavaScript, TypeScript, Python, C++ and C#. The main things I've built recently have been using JS frameworks such as Next.js, React, React Native. I'm exploring new project ideas with new languages and frameworks.</p>
 				<p>The last few years I've been involved with a number of engineering-related competitions. In many of these competitions I've taken on leadership roles, leading small teams of 6 to large teams of 70 in engineering and technical contexts.</p>
 				<p>I won the International Space Settlement Design Competition as the team's VP of Engineering in 2024, and our team was runner-up in 2025. I've also been a UK Space Design Competition national finalist for three consecutive years, serving as company president and a head of department.</p>
