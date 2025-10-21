@@ -39,7 +39,7 @@ export default function Home() {
 			</motion.a>
 			</div>
 		</div>
-		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[55%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
+		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
 				<p>I'm an Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
