@@ -179,11 +179,11 @@ export default function Home() {
 						"Integrated PyAutoGUI to control mouse position in real-time",
 						"Created a Tkinter desktop application to visualise hand movement",
 					]}
-					github="https://github.com/m-bleasdale/UnityGridPlacementSystem"
+					github="https://github.com/m-bleasdale/handUI"
 					date="2023"
 					type="Application"
 					language="Python"
-					link="https://github.com/m-bleasdale/UnityGridPlacementSystem"
+					link="https://github.com/m-bleasdale/handUI"
 				/>
 
 			</div>
