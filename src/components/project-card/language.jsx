@@ -8,6 +8,8 @@ export default function Language ({ value }) {
     if(value === "TypeScript") return <Badge className='bg-[#3178c6]'>{value}</Badge>
     if(value === "C#") return <Badge className='bg-[#178600]'>{value}</Badge>
     if(value === "C++") return <Badge className='bg-[#f34b7d]'>{value}</Badge>
+    if(value === "LTSpice") return <Badge className='bg-[#800000]'>{value}</Badge>
+    else return <Badge>{value}</Badge>
 
 
 }

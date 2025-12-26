@@ -4,6 +4,7 @@ import { FaGithub, FaInstagram, FaLinkedin, FaChevronDown } from "react-icons/fa
 import SocialMedia from "@/components/social-media";
 import * as motion from "motion/react-client"
 import ProjectCard from "@/components/project-card/project-card";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -39,7 +40,7 @@ export default function Home() {
 			</motion.a>
 			</div>
 		</div>
-		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
+		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
 				<p>I'm an Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
@@ -51,6 +52,21 @@ export default function Home() {
 			</div>
 			<div className="flex flex-col gap-5">
 				<h1 className="text-3xl font-medium mb-5">Recent Projects</h1>
+				<ProjectCard 
+					title="CMOS Transistor-Level Multiplexer (LTspice)"
+					description="Designed and simulated a CMOS multiplexer using fundamental logic gates at the transistor level"
+					bullets={[
+						"Designed and combined CMOS implementations of AND, OR, NOT, NAND, and NOR gates",
+						"Built logic functionality with complementary pull-up and pull-down transistors",
+						"Simulated and verified correct logic behavior using transient analysis in LTspice",
+						"Strengthened understanding of CMOS logic design and gate-level circuit composition"
+					]}
+					date="December 2025"
+					type="CMOS Transistors"
+					language="LTSpice"
+					link="/articles/cmos-multiplexer"
+					image="muxzoom.png"
+				/>
 				<ProjectCard 
 					title="BeerBingo - beerbingo.co.uk"
 					description="Gamified platform to encourage reduced drinking by making tracking of alcohol consumption fun"
@@ -188,17 +204,7 @@ export default function Home() {
 
 			</div>
 
-			<div className="flex flex-col items-center gap-2 pb-10">
-				<div className="flex flex-row gap-4 justify-center items-center pb-4">
-					<SocialMedia link="https://www.linkedin.com/in/morgan-bleasdale/" icon={<FaLinkedin color="var(--primary)" size={32}/>} />
-					<SocialMedia link="https://www.instagram.com/morgan.bleasdale/" icon={<FaInstagram color="var(--primary)" size={32}/>} />
-					<SocialMedia link="https://github.com/m-bleasdale" icon={<FaGithub color="var(--primary)" size={32}/>} />
-				</div>
-				<p className="text-lg font-medium text-primary text-center">© 2025 Morgan Bleasdale</p>
-				<p className="text-sm text-center">This site uses anonymised analytics that doesn't track individual users. <a className="underline" href="https://blog.cloudflare.com/free-privacy-first-analytics-for-a-better-web">Learn more about Cloudflare analytics</a></p>
-			</div>
-
-
+			<Footer />
 
 		</div>
     </div>
