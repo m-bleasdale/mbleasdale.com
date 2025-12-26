@@ -6,9 +6,6 @@ import { Badge } from "@/components/ui/badge";
 import Language from "@/components/project-card/language";
 import Type from "@/components/project-card/type";
 
-import 'katex/dist/katex.min.css';
-import Latex from 'react-latex-next';
-
 export async function generateMetadata() {
 
     return {
@@ -75,7 +72,7 @@ export default function Page() {
                     <p>I designed a single-bit 2-input multiplexer. <b>It takes two inputs, A and B, and switches between them based on the value of the select input (S).</b></p>
                     <p>When S is LOW (0), the output should be A. When S is HIGH (1) the output should be B.</p>
                     <p>It is designed using logic gates to create the following boolean expression:</p>
-                    <p className="text-center"><Latex>$\overline S A + S B$</Latex></p>
+                    <p className="text-2xl text-center italic font-bold tracking-wide font-serif"><span className="overline decoration-2">S</span>A + SB</p>
                     <p>This looks something like this using NOT, AND and OR gates.</p>
                     <div className="flex flex-col items-center my-5">
                         <Image src="/mux/muxDiagram.png" height={400} width={800} content="contain" alt="Multiplexer designed using logic gates" className="rounded-xl"/>
