@@ -53,6 +53,17 @@ export default function Home() {
 			<div className="flex flex-col gap-5">
 				<h1 className="text-3xl font-medium mb-5">Recent Projects</h1>
 				<ProjectCard 
+					title="RAM-Based Access Control System"
+					description="Designed and verified an access cotrol system using SystemVerilog"
+					bullets={[
+						"Designed access control in SystemVerilog using synchronous RAM for user ID storage and lookup",
+						"Developed RAM read/write control, with reset initialisation and sequential address generation",
+						"Implemented mode-based control logic to support user authentication and user registration"
+					]}
+					date="January 2026"
+					language="SystemVerilog"
+				/>
+				<ProjectCard 
 					title="CMOS Transistor-Level Multiplexer (LTspice)"
 					description="Designed and simulated a CMOS multiplexer using fundamental logic gates at the transistor level"
 					bullets={[
