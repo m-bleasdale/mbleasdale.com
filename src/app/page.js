@@ -58,6 +58,8 @@ export default function Home() {
 					type="HDL"
 					date="June - July 2026"
 					language="SystemVerilog"
+					github="https://github.com/m-bleasdale/eep1-risc-cpu"
+					link="https://github.com/m-bleasdale/eep1-risc-cpu"
 				/>
 				<ProjectCard 
 					title="Multi-sensor remote-controlled Wi-Fi Lunar Rover"
