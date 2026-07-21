@@ -6,6 +6,7 @@ import Language from "./language";
 import { Badge } from "../ui/badge";
 import Image from "next/image";
 import Bullets from "./bullets";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function ProjectCard ({image, title, description, bullets, website, github, date, type, language, writeUp, link}) {
     const grid = image 
@@ -20,14 +21,15 @@ export default function ProjectCard ({image, title, description, bullets, websit
                 </div>
             }
             <div className="flex flex-col gap-3">
-                <div>
+                <div className="flex flex-row items-center">
                     <a 
                         href={link} 
-                        className="text-lg font-medium border-b border-b border-foreground hover:cursor hover:text-foreground/90 hover:border-foreground/90"
+                        className={`text-lg font-medium border-foreground flex flex-row gap-2 items-center ${link ? "border-b hover:cursor hover:text-foreground/80 hover:border-foreground/80" : ""}`}
                         target="_blank" 
                         rel="noopener noreferrer"
                     >
                         {title}
+                        {link && <FaArrowUpRightFromSquare size={16} />}
                     </a>
                 </div>
                 <div>

@@ -9,6 +9,9 @@ export default function Type ({ value }) {
     if(value === "Application") return <Badge className='bg-amber-600 text-white'>{value}</Badge>
     if(value === "Full-stack") return <Badge className='bg-blue-700 text-white'>{value}</Badge>
     if(value === "CMOS Transistors") return <Badge>{value}</Badge>
+    if(value === "HDL") return <Badge className='bg-purple-800 text-white'>{value}</Badge>
+    if(value === "Analogue Circuit") return <Badge className='bg-green-800 text-white'>{value}</Badge>
+    if(value === "Mixed-Signal Circuit") return <Badge className='bg-blue-300 text-foreground'>{value}</Badge>
     else return <Badge>{value}</Badge>
 
 }

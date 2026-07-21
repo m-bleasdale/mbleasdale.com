@@ -43,8 +43,8 @@ export default function Home() {
 		<div className="flex flex-col md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[60%] w-full h-[100vh] pt-15 p-8 sm:px-20 pb-20 gap-12">
 			<div className="flex flex-col gap-5 text-lg">
 				<h1 className="text-5xl font-medium mb-5" id="hello">Hello...</h1>
-				<p>I'm an Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, computing, and space.</p>
-				<p>I've been programming for 6 years and I'm familiar with JavaScript, TypeScript, Python, C++ and C#. The main things I've built recently have been using JS frameworks such as Next.js, React, React Native. I'm exploring new project ideas with new languages and frameworks.</p>
+				<p>I'm an Electrical and Electronic Engineering student at Imperial College London, passionate about building things. I have an interest in programming, electronics, semiconductors, computing, and space.</p>
+				<p>I've been programming for 7 years and I'm familiar with JavaScript, TypeScript, Python, C++ and C#. I'm exploring new project ideas with new languages and frameworks.</p>
 				<p>The last few years I've been involved with a number of engineering-related competitions. In many of these competitions I've taken on leadership roles, leading small teams of 6 to large teams of 70 in engineering and technical contexts.</p>
 				<p>I won the International Space Settlement Design Competition as the team's VP of Engineering in 2024, and our team was runner-up in 2025. I've also been a UK Space Design Competition national finalist for three consecutive years, serving as company president and a head of department.</p>
 				<p>I've also been named Engineering Student of the Year Runner-Up by the Engineering Education Scheme Wales.</p>
@@ -53,6 +53,27 @@ export default function Home() {
 			<div className="flex flex-col gap-5">
 				<h1 className="text-3xl font-medium mb-5">Recent Projects</h1>
 				<ProjectCard 
+					title="Arm-based RISC CPU in SystemVerilog"
+					description="SystemVerilog implementation of EEP1, a 16-bit Harvard-architecture CPU"
+					type="HDL"
+					date="June - July 2026"
+					language="SystemVerilog"
+				/>
+				<ProjectCard 
+					title="Multi-sensor remote-controlled Wi-Fi Lunar Rover"
+					description="Designed and built a working RC lunar rover capable of detecting radio, IR, and ultrasonic signals"
+					type="Mixed-Signal Circuit"
+					date="May - June 2026"
+					language="C++"
+				/>
+				<ProjectCard 
+					title="Operational Amplifier (LTSpice)"
+					description="Designed and simulated an operational amplifier using LTSpice"
+					type="Analogue Circuit"
+					date="February - March 2026"
+					language="LTSpice"
+				/>
+				<ProjectCard 
 					title="RAM-Based Access Control System"
 					description="Designed and verified an access cotrol system using SystemVerilog"
 					bullets={[
@@ -60,6 +81,7 @@ export default function Home() {
 						"Developed RAM read/write control, with reset initialisation and sequential address generation",
 						"Implemented mode-based control logic to support user authentication and user registration"
 					]}
+					type="HDL"
 					date="January 2026"
 					language="SystemVerilog"
 				/>
@@ -110,7 +132,7 @@ export default function Home() {
 					date="June - August 2025"
 					type="Full-stack"
 					language="JavaScript"
-					link="https://www.ntfn.co.uk/"
+					link="https://github.com/m-bleasdale/ntfn"
 					image="ntfn.png"
 				/>
 				<ProjectCard 
