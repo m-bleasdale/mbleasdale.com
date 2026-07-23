@@ -51,10 +51,17 @@ export default function Home() {
 				<p>It's also an honour to be a recipient of the UKESF Semiconductor Talent Award - a scheme which provides mentorship sessions, workshops, and a learning and development bursary.</p>
 			</div>
 			<div className="flex flex-col gap-5">
-				<h1 className="text-3xl font-medium mb-5">Recent Projects</h1>
+				<h1 className="text-3xl font-medium mb-2">Recent Projects</h1>
+				<h2 className="text-xl font-medium mb-2">2026</h2>
 				<ProjectCard 
-					title="Arm-based RISC CPU in SystemVerilog"
-					description="SystemVerilog implementation of EEP1, a 16-bit Harvard-architecture CPU"
+					title="EEP1: RISC CPU in SystemVerilog with custom ISA" //Bullets needed, describe also custom ISA (asm)
+					description="16-bit Harvard-architecture RISC CPU in SystemVerilog with custom ISA, following the design principles of ARM architecture"
+					bullets={[
+						"Implemented 8 ALU operations (arithmetic, logical, shift) and a flag system (NZCV) that supports jumps and carry-chained operations",
+						"Flag-based conditional jumping (16 conditions), allowing implementation of complex programs, like loops and subroutines",
+						"Built load/store architecture with dedicated memory instructions, interacting between RAM and 8x16-bit register file",
+						"Verified design with 100% pass-rate in SystemVerilog testbenches, and a multi-word 16x16-bit software multiplication program"
+					]}
 					type="HDL"
 					date="June - July 2026"
 					language="SystemVerilog"
@@ -62,22 +69,36 @@ export default function Home() {
 					link="https://github.com/m-bleasdale/eep1-risc-cpu"
 				/>
 				<ProjectCard 
-					title="Multi-sensor remote-controlled Wi-Fi Lunar Rover"
-					description="Designed and built a working RC lunar rover capable of detecting radio, IR, and ultrasonic signals"
+					title="Multi-sensor remote-controlled Wi-Fi Lunar Rover (Group Project)"
+					description="Designed and built an RC rover that surveys a lunar environment, detecting RF, IR, ultrasonic, and magnetic fields."
+					bullets={[
+						"Built radio subsystem, with a tuned LC coil antenna, to detect 89 kHz ASK-modulated carrier and decode UART-framed ASCII data",
+						"Implemented an inverting amplifier and envelope detector to demodulate RF signal, and a hysteresis comparator to output binary",
+						"Contributed to rover movement using a differential-drive base, with a movement library exposing direction/PWM speed control",
+						"Led project management (6 people) using Agile sprints (weekly planning, sprint reviews), and authored the 62-page technical report"
+					]}
 					type="Mixed-Signal Circuit"
 					date="May - June 2026"
-					language="C++"
+					language="RF"
+					link="./EEE-Lunar-Rover-Year-1.pdf"
+					writeUp="./EEE-Lunar-Rover-Year-1.pdf"
 				/>
 				<ProjectCard 
-					title="Operational Amplifier (LTSpice)"
-					description="Designed and simulated an operational amplifier using LTSpice"
+					title="Discrete BJT Operational Amplifier (LTSpice)"
+					description="Designed and simulated an operational amplifier from individual BJTs, following a differential-gain-power stage architecture"
+					bullets={[
+						"Designed differential amplifier (long-tailed pair) with Wilson current mirror as active load to increase differential gain (high CMRR)",
+						"Implemented a common-emitter gain stage with current mirror active load to boost voltage gain (178 → 1188 with active load)",
+						"Developed class AB power amplifier output stage with push-pull transistors to increase output current and reduce crossover distortion",
+						"Diagnosed high-frequency instability via AC analysis of phase response (negative phase margin), stabilised with a compensation capacitor"
+					]}
 					type="Analogue Circuit"
 					date="February - March 2026"
 					language="LTSpice"
 				/>
 				<ProjectCard 
 					title="RAM-Based Access Control System"
-					description="Designed and verified an access cotrol system using SystemVerilog"
+					description="Designed and verified an access control system using SystemVerilog"
 					bullets={[
 						"Designed access control in SystemVerilog using synchronous RAM for user ID storage and lookup",
 						"Developed RAM read/write control, with reset initialisation and sequential address generation",
@@ -87,6 +108,7 @@ export default function Home() {
 					date="January 2026"
 					language="SystemVerilog"
 				/>
+				<h2 className="text-xl font-medium mb-2">2025</h2>
 				<ProjectCard 
 					title="CMOS Transistor-Level Multiplexer (LTspice)"
 					description="Designed and simulated a CMOS multiplexer using fundamental logic gates at the transistor level"
@@ -173,7 +195,7 @@ export default function Home() {
 					link="https://github.com/m-bleasdale/assistant"
 					image="assistant.png"
 				/>
-
+				<h2 className="text-xl font-medium mb-2">2024</h2>
 				<ProjectCard 
 					title="EESW Sustainable Community - Gold Crest Award"
 					description="Conceptual sustainable community designed for 500 residents in South Wales"
@@ -221,7 +243,7 @@ export default function Home() {
 					link="https://github.com/m-bleasdale/UnityGridPlacementSystem"
 					image="gridplacement.png"
 				/>
-
+				<h2 className="text-xl font-medium mb-2">2023</h2>
 				<ProjectCard 
 					title="HandUI"
 					description="An AI-based hand-tracking interface for desktop mouse control"
