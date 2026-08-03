@@ -54,7 +54,7 @@ export default function Home() {
 				<h1 className="text-3xl font-medium mb-2">Recent Projects</h1>
 				<h2 className="text-xl font-medium mb-2">2026</h2>
 				<ProjectCard 
-					title="EEP1: RISC CPU in SystemVerilog with custom ISA" //Bullets needed, describe also custom ISA (asm)
+					title="RISC CPU in SystemVerilog with custom ISA" //Bullets needed, describe also custom ISA (asm)
 					description="16-bit Harvard-architecture RISC CPU in SystemVerilog with custom ISA, following the design principles of ARM architecture"
 					bullets={[
 						"Implemented 8 ALU operations (arithmetic, logical, shift) and a flag system (NZCV) that supports jumps and carry-chained operations",
