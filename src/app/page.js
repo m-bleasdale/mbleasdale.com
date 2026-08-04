@@ -58,9 +58,9 @@ export default function Home() {
 					description="16-bit Harvard-architecture RISC CPU in SystemVerilog with custom ISA, following the design principles of ARM architecture"
 					bullets={[
 						"Implemented 8 ALU operations (arithmetic, logical, shift) and a flag system (NZCV) that supports jumps and carry-chained operations",
-						"Flag-based conditional jumping (16 conditions), allowing implementation of complex programs, like loops and subroutines",
+						"Flag-based conditional jumping (16 conditions, derived from NZCV status flags set by ALU operations), enabling structured control flow such as loops, conditionals, and subroutine calls/returns",
 						"Built load/store architecture with dedicated memory instructions, interacting between RAM and 8x16-bit register file",
-						"Verified design with 100% pass-rate in SystemVerilog testbenches, and a multi-word 16x16-bit software multiplication program"
+						"•	Verified design with 100% pass-rate in SystemVerilog testbenches, and an example multi-word 16x16-bit software multiplication program to demonstrate functionality"
 					]}
 					type="HDL"
 					date="June - July 2026"
@@ -72,9 +72,8 @@ export default function Home() {
 					title="Multi-sensor remote-controlled Wi-Fi Lunar Rover (Group Project)"
 					description="Designed and built an RC rover that surveys a lunar environment, detecting RF, IR, ultrasonic, and magnetic fields."
 					bullets={[
-						"Built radio subsystem, with a tuned LC coil antenna, to detect 89 kHz ASK-modulated carrier and decode UART-framed ASCII data",
-						"Implemented an inverting amplifier and envelope detector to demodulate RF signal, and a hysteresis comparator to output binary",
-						"Contributed to rover movement using a differential-drive base, with a movement library exposing direction/PWM speed control",
+						"Built radio subsystem with a tuned LC coil antenna, inverting amplifier, envelope detector, and hysteresis comparator to demodulate an 89 kHz ASK-modulated carrier into binary UART-framed ASCII data",
+						"Implemented differential-drive rover movement via PWM speed control and direction; integrated with an HTTP server/webpage over Wi-Fi for remote driving and live telemetry",
 						"Led project management (6 people) using Agile sprints (weekly planning, sprint reviews), and authored the 62-page technical report"
 					]}
 					type="Mixed-Signal Circuit"
@@ -87,10 +86,10 @@ export default function Home() {
 					title="Discrete BJT Operational Amplifier (LTSpice)"
 					description="Designed and simulated an operational amplifier from individual BJTs, following a differential-gain-power stage architecture"
 					bullets={[
-						"Designed differential amplifier (long-tailed pair) with Wilson current mirror as active load to increase differential gain (high CMRR)",
-						"Implemented a common-emitter gain stage with current mirror active load to boost voltage gain (178 → 1188 with active load)",
-						"Developed class AB power amplifier output stage with push-pull transistors to increase output current and reduce crossover distortion",
-						"Diagnosed high-frequency instability via AC analysis of phase response (negative phase margin), stabilised with a compensation capacitor"
+						"Designed a differential amplifier (long-tailed pair) with a Wilson current mirror active load for high differential gain, low common mode gain, and a high output impedance for improved CMRR",
+						"Implemented a common-emitter amplifier stage with current mirror active load to boost voltage gain (178 → 1188 with active load)",
+						"Developed class AB push-pull power amplifier to increase output current and reduce crossover distortion",
+						"Diagnosed high-frequency instability via AC analysis of phase response (negative phase margin); stabilised with a compensation capacitor to bypass common-emitter stage at high frequencies"
 					]}
 					type="Analogue Circuit"
 					date="February - March 2026"
