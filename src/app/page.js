@@ -94,6 +94,7 @@ export default function Home() {
 					type="Analogue Circuit"
 					date="February - March 2026"
 					language="LTSpice"
+					link="/articles/op-amp"
 				/>
 				<ProjectCard 
 					title="RAM-Based Access Control System"
