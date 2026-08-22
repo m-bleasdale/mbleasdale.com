@@ -57,10 +57,10 @@ export default function Home() {
 					title="RISC CPU in SystemVerilog with custom ISA" //Bullets needed, describe also custom ISA (asm)
 					description="16-bit Harvard-architecture RISC CPU in SystemVerilog with custom ISA, following the design principles of ARM architecture"
 					bullets={[
-						"Implemented 8 ALU operations (arithmetic, logical, shift) and a flag system (NZCV) that supports jumps and carry-chained operations",
-						"Flag-based conditional jumping (16 conditions, derived from NZCV status flags set by ALU operations), enabling structured control flow such as loops, conditionals, and subroutine calls/returns",
-						"Built load/store architecture with dedicated memory instructions, interacting between RAM and 8x16-bit register file",
-						"•	Verified design with 100% pass-rate in SystemVerilog testbenches, and an example multi-word 16x16-bit software multiplication program to demonstrate functionality"
+						"Implemented a single-cycle data path with an 8-operation ALU and NZCV flag registers, where flag states are updated in one cycle and consumed by the next cycle to support carry-chained operations and jumps.",
+						"Flag-based conditional jumping (16 conditions, derived from NZCV status flags set by ALU operations), enabling structured control flow such as loops, conditionals, and subroutine calls/returns.",
+						"Built load/store architecture with dedicated memory instructions, interfacing an 8x16-bit register file with data RAM and PC register with instruction ROM, supporting register-offset or direct addressing.",
+						"Verified RTL using SystemVerilog testbenches in Icarus Verilog with a 100% pass-rate; demonstrated functionality with a custom assembly program to perform a multi-word 16x16-bit software multiplication"
 					]}
 					type="HDL"
 					date="June - July 2026"
