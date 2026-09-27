@@ -54,13 +54,25 @@ export default function Home() {
 				<h1 className="text-3xl font-medium mb-2">Recent Projects</h1>
 				<h2 className="text-xl font-medium mb-2">2026</h2>
 				<ProjectCard 
-					title="RISC CPU in SystemVerilog with custom ISA" //Bullets needed, describe also custom ISA (asm)
+					title="FPGA Mixed Signal Oscilloscope and Signal Generator (SystemVerilog)" 
+					description="Synthesised and deployed a SystemVerilog RTL oscilloscope/signal generator to Intel Cyclone IV FPGA using Quartus"
+					bullets={[
+						"Implemented Direct Digital Synthesis for signal generation using a BRAM-stored waveform lookup table, with frequency set via a phase-increment register and amplitude set via a gain register.",
+						"Interfaced a 2 MSps ADC as probe input (Nyquist limit of 1 MHz), buffering samples in FPGA-side BRAM with edge-triggered capture (adjustable threshold) to isolate waveform around a trigger event.",
+						"Decimated waveform on-chip, reducing data rate to ensure compatibility with UART/USB bandwidth limits.",
+					]}
+					type="HDL"
+					date="August - September 2026"
+					language="SystemVerilog"
+				/>
+				<ProjectCard 
+					title="RISC CPU in SystemVerilog with custom ISA"
 					description="16-bit Harvard-architecture RISC CPU in SystemVerilog with custom ISA, following the design principles of ARM architecture"
 					bullets={[
 						"Implemented a single-cycle data path with an 8-operation ALU and NZCV flag registers, where flag states are updated in one cycle and consumed by the next cycle to support carry-chained operations and jumps.",
 						"Flag-based conditional jumping (16 conditions, derived from NZCV status flags set by ALU operations), enabling structured control flow such as loops, conditionals, and subroutine calls/returns.",
 						"Built load/store architecture with dedicated memory instructions, interfacing an 8x16-bit register file with data RAM and PC register with instruction ROM, supporting register-offset or direct addressing.",
-						"Verified RTL using SystemVerilog testbenches in Icarus Verilog with a 100% pass-rate; demonstrated functionality with a custom assembly program to perform a multi-word 16x16-bit software multiplication"
+						"Verified RTL using SystemVerilog testbenches in Icarus Verilog with a 100% pass-rate; demonstrated functionality with a custom assembly program to perform a multi-word 16x16-bit software multiplication."
 					]}
 					type="HDL"
 					date="June - July 2026"
