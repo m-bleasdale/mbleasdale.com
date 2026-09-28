@@ -54,16 +54,18 @@ export default function Home() {
 				<h1 className="text-3xl font-medium mb-2">Recent Projects</h1>
 				<h2 className="text-xl font-medium mb-2">2026</h2>
 				<ProjectCard 
-					title="FPGA Mixed Signal Oscilloscope and Signal Generator (SystemVerilog)" 
-					description="Synthesised and deployed a SystemVerilog RTL oscilloscope/signal generator to Intel Cyclone IV FPGA using Quartus"
+					title="FPGA Digital Storage Oscilloscope and Signal Generator (SystemVerilog)" 
+					description="Designed and synthesised a SystemVerilog RTL oscilloscope/signal generator to Intel Cyclone IV FPGA using Quartus"
 					bullets={[
-						"Implemented Direct Digital Synthesis for signal generation using a BRAM-stored waveform lookup table, with frequency set via a phase-increment register and amplitude set via a gain register.",
-						"Interfaced a 2 MSps ADC as probe input (Nyquist limit of 1 MHz), buffering samples in FPGA-side BRAM with edge-triggered capture (adjustable threshold) to isolate waveform around a trigger event.",
-						"Decimated waveform on-chip, reducing data rate to ensure compatibility with UART/USB bandwidth limits.",
+						"Implemented Direct Digital Synthesis with a 32-bit phase accumulator and a 4096-entry sine lookup table in BRAM, with frequency and gain set over UART, driving a 12-bit serial (SPI) DAC at 200 kSps.",
+						"Interfaced a 2 MSps ADC as probe input (Nyquist limit of 1 MHz), capturing samples into an 8196-sample BRAM buffer with a hysteresis edge trigger and an adjustable time base, then streamed to laptop via UART.",
+						"Verified design with 15 self-checking testbenches (335 checks) to validate functionality before synthesis.",
 					]}
 					type="HDL"
 					date="August - September 2026"
 					language="SystemVerilog"
+					github="https://github.com/m-bleasdale/fpga-dso"
+					link="https://github.com/m-bleasdale/fpga-dso"
 				/>
 				<ProjectCard 
 					title="RISC CPU in SystemVerilog with custom ISA"
